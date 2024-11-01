@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+ int arr[]={1,2,-1,8,2};
+ int n=sizeof(arr)/sizeof(arr[1]);
+ int max=arr[0];
+ int onemore=arr[0];
+ for(int i=1;i<n;i++){
+       if(arr[i]<0){
+         max=0;
+     }
+     if(arr[i]>0){
+         max+=arr[i];
+     }
+     if(max>onemore){
+         onemore=max;
+     }
+   
+ }
+ cout<<onemore;
+}
