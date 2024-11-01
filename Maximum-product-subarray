@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int maxProduct(vector<int>& nums) {
+        int n=nums.size();
+       int maxz=nums[0];
+       int minz=nums[0];
+       int ans=nums[0];
+       for(int i=1;i<n;i++){
+
+        if(nums[i]<0){
+            swap(maxz,minz);
+        }
+        maxz=max(nums[i],maxz*nums[i]);
+         minz=min(nums[i],minz*nums[i]);
+       
+       if(maxz>ans){
+        ans=maxz;
+       }
+       }
+
+       return ans;
+    }
+};
