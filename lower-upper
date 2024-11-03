@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char character;
+  cout<<"enter a caharcter";
+  cin>>character;
+  if((int)character>=65 && (int)character <=90){
+      cout<<"UPPER";
+     } else if((int)character>=97 && (int)character <=122){
+          cout<<"LOWER";
+      }
+      else{
+          cout<<"ahi";
+      }
+      return 0;
+  }
